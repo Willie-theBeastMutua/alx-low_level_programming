@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * main -Entry point
+ *  print_alphabet -Prototype to print alphabets
  *
  * Return: Always 0 (Success)
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char character;
 
@@ -15,5 +15,4 @@ int main(void)
 		_putchar(character);
 	}
 	_putchar('\n');
-	return (0);
 }
