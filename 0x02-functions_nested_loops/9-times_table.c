@@ -16,28 +16,38 @@ void times_table(void)
 		for (j = 0; j < 10; j++)
 		{
 			mult = i * j;
-			if (mult <= 9)
+			if (mult == 0)
 			{
-			_putchar(mult + '0');
-			if (j == 9)
+				if (j > 0)
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
+				_putchar(mult + '0');
+				_putchar(',');
+			}
+			if (mult > 0 && mult <= 9)
 			{
-				break;
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(mult + '0');
+				if (j == 9)
+				{
+					break;
+				}
+				_putchar(',');
 			}
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
-			}
-			else
+			else if (mult > 9)
 			{
 
+				_putchar(' ');
 				_putchar(mult / 10 + '0');
 				_putchar(mult % 10 + '0');
 				if (j == 9)
 				{
 					break;
 				}
-				_putchar(',');
-				_putchar(' ');
+				_putchar(',');				
 			}
 		}
 		_putchar('\n');
