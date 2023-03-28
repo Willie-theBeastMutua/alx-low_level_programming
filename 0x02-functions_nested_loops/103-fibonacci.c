@@ -24,5 +24,6 @@ int main(void)
 		f2 = sum;
 	}
 	printf("%ld\n", sumev);
+	return (0);
 }
 
