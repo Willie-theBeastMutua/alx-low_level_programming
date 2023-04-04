@@ -11,12 +11,12 @@ void puts2(char *str)
 {
 	int count = 0;
 	int c;
-	
+
 	while (str[count] != '\0')
 	{
 		count++;
 	}
-	for (c = 0; c <= count-1; c++)
+	for (c = 0; c <= count - 1; c++)
 	{
 		if (c % 2 == 0)
 		{
