@@ -9,11 +9,11 @@
 char *cap_string(char *c)
 {
 	int count = 0;
-	char esc[] = " "",;.!?(){}\n\t\"";
+	char esc[] = " ,;.!?(){}\n\t\"";
 	int i;
 	int j;
 	int cp = 0;
-		
+
 	while (c[count] != '\0')
 		count++;
 	if (c[0] > 96 && c[0] < 123)
@@ -23,7 +23,7 @@ char *cap_string(char *c)
 	for (i = 1; i < count; i++)
 	{
 		for (j = 0; j < 13; j++)
-		{	
+		{
 			if (esc[j] == c[i])
 				cp = 1;
 		}
