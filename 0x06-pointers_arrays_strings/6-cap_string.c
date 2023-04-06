@@ -1,0 +1,38 @@
+#include "main.h"
+
+/**
+ * cap_string -function that capitalizes all words of a string.
+ * @c: characters o be checked
+ *
+ * Return: character
+ */
+char *cap_string(char *c)
+{
+	int count = 0;
+	char esc[] = " "",;.!?(){}\n\t\"";
+	int i;
+	int j;
+	int cp = 0;
+		
+	while (c[count] != '\0')
+		count++;
+	if (c[0] > 96 && c[0] < 123)
+	{
+		c[0] -= 32;
+	}
+	for (i = 1; i < count; i++)
+	{
+		for (j = 0; j < 13; j++)
+		{	
+			if (esc[j] == c[i])
+				cp = 1;
+		}
+		if (cp == 1)
+		{
+			if (c[i + 1] > 96 && c[i + 1] < 123)
+				c[i + 1] -= 32;
+		}
+		cp = 0;
+	}
+	return (c);
+}
