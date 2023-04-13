@@ -20,9 +20,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		c1++;
 	while (s2[c2] != '\0')
 		c2++;
-	if (s1 == NULL)
+	if (c1 == 0)
 		s1 = "";
-	if (s2 == NULL)
+	if (c2 == 0)
 		s2 = "";
 	if (n >= c2)
 		n = c2;
