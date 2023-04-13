@@ -16,14 +16,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int c1 = 0, c2 = 0;
 	unsigned int i, j;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	while (s1[c1] != '\0')
 		c1++;
 	while (s2[c2] != '\0')
 		c2++;
-	if (c1 == 0)
-		s1 = "";
-	if (c2 == 0)
-		s2 = "";
 	ar = malloc((c1 + n + 1) * sizeof(char));
 	if (ar == NULL)
 		return (NULL);
