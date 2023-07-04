@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include "lists.h"
 #include <string.h>
+#include <stddef.h>
+
 /**
  * add_node_end - prototyp to add list at the end
  * @head: start of list
