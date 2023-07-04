@@ -18,7 +18,10 @@ list_t *add_node(list_t **head, const char *str)
 
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
+	{
+		free(content);
 		return (NULL);
+	}
 	leng = strlen(str);
 	name = malloc(sizeof(char) * (leng + 1));
 	for (i = 0; str[i]; i++)
